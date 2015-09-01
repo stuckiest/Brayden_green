@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
- resources :static_pages
+ root 'static_pages#index'
+get '/about', to: 'static_pages#about', as: :about
+get '/education', to: 'static_pages#education', as: :education
+get '/work_history', to: 'static_pages#work_history', as: :work_history
+
+ resources :static_pages #this is pointing to the static_pages controller
+ 
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
