@@ -1,2 +1,10 @@
-<h1>StaticPages#education</h1>
-<p>Find me in app/views/static_pages/education.html.erb</p>
+<h1>Brayden Green</h1>
+<h2>Education</h2>
+<% @education.each do |i| %>
+<ul>
+  <li>School Name: <%= i.school_name %></li>
+  <li>Start Date: <%= i.start_date %></li>
+  <li>End Date: <%= i.end_date %></li>
+  <li>Liked? <%= i.liked %></li>
+  </ul>
+ <% end %>

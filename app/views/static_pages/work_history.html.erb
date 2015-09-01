@@ -1,2 +1,12 @@
-<h1>StaticPages#work_history</h1>
-<p>Find me in app/views/static_pages/work_history.html.erb</p>
+<h1>Brayden Green</h1>
+<h2>Work History</h2>
+
+<% @work.each do |i| %>
+<ul>
+  <li>Title: <%= i.job_title %></li>
+  <li>Employer: <%= i.employer %></li>
+  <li>Start Date: <%= i.start_date %></li>
+  <li>End Date: <%= i.end_date %></li>
+  <li>Liked? <%= i.liked %></li>
+  </ul>
+ <% end %>
